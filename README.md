@@ -6,7 +6,7 @@ _Projeto desenvolvido para processo seletivo na [Webjump](https://webjump.com.br
 
 ---
 
-## :bookmark_tabs: Sobre o projeto <a name="about"></a>
+## :bookmark_tabs: Sobre o projeto
 
 Nesse projeto foi desenvolvido um **e-commerce** utilizando as tecnologias principais sendo **React**, **Redux**.
 
@@ -19,32 +19,33 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 ---
 
-## :large_blue_circle: Regras de Negócio <a name="checklist"></a>
+## :large_blue_circle: Regras de Negócio
 
-- [ ] Criar consulta com a lista de categorias a serem exibidas no menu
-- [ ] Exibir os produtos das categorias.
-- [ ] Funcionalidade de filtro através da sidebar
-- [ ] Fonte padrão: "Open Sans"
-- [ ] Fonte do menu e botão de busca: "Open Sans - Extrabold"
-- [ ] Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-- [ ] Design responsivo nos breakpoints
-  - [ ] 320px
-  - [ ] 768px
-  - [ ] 1024px
-  - [ ] 1440px
-- [ ] Suporte para navegadores
-  - [ ] IE
-  - [ ] Chrome
-  - [ ] Safari
-  - [ ] Firefox
-- [ ] HTML Semântico
-- [ ] Uso de pré-processadores CSS (Sass, Less)
-- [ ] Acessibilidade
-- [ ] SEO
-- [ ] Performance
-- [ ] Utilizar alguma automatização (Grunt, Gulp, ...)
+- ⚪ Criar consulta com a lista de categorias a serem exibidas no menu
+- ⚪ Exibir os produtos das categorias.
+- ⚪ Funcionalidade de filtro através da sidebar
+- ⚪ Fonte padrão: "Open Sans"
+- ⚪ Fonte do menu e botão de busca: "Open Sans - Extrabold"
+- ⚪ Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
+- ⚪ Design responsivo nos breakpoints
+  - ⭕ 320px
+  - ⭕ 768px
+  - ⭕ 1024px
+  - ⭕ 1440px
+- ⚪ Suporte para navegadores
+  - ⭕ IE
+  - ⭕ Chrome
+  - ⭕ Safari
+  - ⭕ Firefox
+- ⚪ HTML Semântico
+- ⚪ Uso de pré-processadores CSS (Sass, Less)
+- ⚪ Acessibilidade
+- ⚪ SEO
+- ⚪ Performance
+- ⚪ Utilizar alguma automatização (Grunt, Gulp, ...)
+- ☑️ Implementação do react com webpack e babel
 
-## :books: Informações <a name="informations"></a>
+## :books: Informações
 
 #### :rocket: Execução
 
@@ -69,7 +70,7 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
 1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador
 
-#### Estrutura e organização do código e dos arquivos
+#### 📁 Estrutura e organização do código e dos arquivos
 
 ```js
 assessment-frontend
@@ -91,7 +92,7 @@ assessment-frontend
 └───mock-api // Itens mockados
 ```
 
-#### Soluções adotadas
+#### 📓 Soluções adotadas
 
 Utilizei **React** para o desenvolvimento da aplicação web.
 Fiz a adaptação para conseguir utiliza-lo, implementando webpack e o babel, utilizando as bibliotecas auxiliares em `devDependecies` para compilação e execução do código tanto em produção quanto em desenvolvimento.
