@@ -63,38 +63,55 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 ---
 
-#### :gear: Tecnologias utilizadas
-
-1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.
-1. [Redux](https://redux.js.org/): Para gerenciamento de estado da aplicação.
-1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
-1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador
-
-#### 📁 Estrutura e organização do código e dos arquivos
-
-```js
-assessment-frontend
-│   .babelrc // Arquivo de configuração do transpilador
-│   app.js // Arquivo index e de inicialização da aplicação
-│   .package.json // Arquivo de configuração do projeto e listagem de bibliotecas
-│   README.md // Documentação do projeto
-│   webpack.config.js // Arquivo de configuração do webpack
-│
-└───src
-│   │   index.js
-│   │   App.js
-│   │
-│   └───components
-│       │   index.js
-│       │   Navbar
-│       │   ...
-│
-└───mock-api // Itens mockados
-```
-
-#### 📓 Soluções adotadas
+#### 📓 Soluções adotadas e informações
 
 Utilizei **React** para o desenvolvimento da aplicação web.
 Fiz a adaptação para conseguir utiliza-lo, implementando webpack e o babel, utilizando as bibliotecas auxiliares em `devDependecies` para compilação e execução do código tanto em produção quanto em desenvolvimento.
 
 Para a parte de _gerenciamento de estado da aplicação_, optei pela implementação com **redux** prevendo _escalabilidade_ na aplicação, pois features novas sempre irão surgir, estar preparado para este gereciamento é menos retrabalho que possa ter.
+
+A aplicações consiste da tela inicial, onde é opcional o usuário cadastrar seu nome e e-mail para listar ao final da compra pela loja.
+Então para o controle dessas rotas, utilizo o `react-router-dom`.
+
+
+#### :gear: Tecnologias utilizadas
+
+1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.
+1. [Redux](https://redux.js.org/): Para gerenciamento de estado da aplicação.
+1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
+1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador.
+1. [react-router-dom](https://reactrouter.com/web/api/): Para gereciamento de rotas na aplicação.
+1. [RTL](https://testing-library.com/docs/react-testing-library/intro/): Para testes na aplicação
+
+#### 📁 Estrutura e organização do código e dos arquivos
+
+```js
+assessment-frontend
+│   .babelrc // Configuração do transpilador
+│   app.js //  Inicialização da aplicação
+│   package.json //  Configuração do projeto e listagem de bibliotecas
+│   README.md // Documentação do projeto
+│   webpack.config.js //  Configuração do webpack
+│
+└───src
+│   │   index.js // Inicilização do react com virtual DOM, provider do Redux e Router 
+│   │   App.js // Aplicação e rotas com suas pages definidas
+│   │   App.css // CSS reset e variaveis globais para uso nos componentes
+│   │
+│   └───components // Componentes da aplicação
+│   │   │   index.js // Arquivo index para exportação direto da raiz, sem acessar as pastas
+│   │   │   Navbar // Visando componentes com concetração de arquivos próprios (estilos, testes...)
+│   │   └───...
+│   │
+│   └───pages // Páginas da aplicação
+│   │   │   Login // Página de Login
+│   │   │   Store // Página Home com Categorias
+│   │   └───
+│   │
+│   └───redux // Pasta contendo toda configuração do Redux
+│       │   actions // Actions disparadas pelos componentes e types padrões
+│       │   reducers // Reducers da aplicação contendo os estados de `products` e `user`
+│       │   store // Configuração padrão da store
+│       └───
+└───mock-api // Itens mockados
+```

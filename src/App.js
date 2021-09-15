@@ -1,21 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { Route, Switch } from 'react-router';
+import { Login, Store } from './pages';
 import './App.css';
 const App = () => {
 
-  const tryFetch = async () => {
-    const response = await fetch('http://localhost:8888/api/V1/categories/list ');
-    const data = await response.json();
-    console.log(data);
-  }
-
-  useEffect(() => {
-    tryFetch();
-  }, [])
-
     return (
-        <div>
-          Hello React From Webpack!
-        </div>
+      <Switch>
+      <Route exact path="/" component={ Login } />
+      <Route exact path="/carteira" component={ Store } />
+    </Switch>
     )
 }
 
