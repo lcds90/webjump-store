@@ -6,10 +6,14 @@
   "dependencies": {
     "connect": "~3.6.6",
     "cors": "^2.8.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "serve-static": "~1.13.2"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "webpack-dev-server --hot --open --mode development",
+    "build": "webpack --config webpack.config.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -17,5 +21,18 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme"
+  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  }
 }
