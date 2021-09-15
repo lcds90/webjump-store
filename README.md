@@ -82,12 +82,14 @@ Então para o controle dessas rotas, utilizo o `react-router-dom`.
 1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador, nas bibliotecas de desenvolvimento estão os plugins necessários para compilação correta do código.
 1. [react-router-dom](https://reactrouter.com/web/api/): Para gereciamento de rotas na aplicação.
 1. [RTL](https://testing-library.com/docs/react-testing-library/intro/): Para testes na aplicação
+1. [Eslint](https://eslint.org/): Para estilização e padronização com boas práticas de código
 
 #### 📁 Estrutura e organização do código e dos arquivos
 
 ```js
 assessment-frontend
 │   .babelrc // Configuração do transpilador
+│   .eslintrc // Configuração e regras do eslint na aplicação
 │   app.js //  Inicialização da aplicação
 │   package.json //  Configuração do projeto e listagem de bibliotecas
 │   README.md // Documentação do projeto

@@ -24,9 +24,9 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/webjump/assessment-frontend.git"
   },
-  "author": "",
+  "author": "Leonardo Conceição dos Santos",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme",
+  "homepage": "https://bitbucket.org/lcds90/webjump-assessment-frontend/src/desafio",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/plugin-transform-runtime": "^7.15.0",
@@ -54,5 +54,6 @@
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1"
-  }
+  },
+  "eslintIgnore": ["app.js"]
 }
