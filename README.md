@@ -79,7 +79,7 @@ Então para o controle dessas rotas, utilizo o `react-router-dom`.
 1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.
 1. [Redux](https://redux.js.org/): Para gerenciamento de estado da aplicação.
 1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
-1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador.
+1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador, nas bibliotecas de desenvolvimento estão os plugins necessários para compilação correta do código.
 1. [react-router-dom](https://reactrouter.com/web/api/): Para gereciamento de rotas na aplicação.
 1. [RTL](https://testing-library.com/docs/react-testing-library/intro/): Para testes na aplicação
 
