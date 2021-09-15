@@ -9,11 +9,13 @@
     "cors": "^2.8.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1",
     "serve-static": "~1.13.2"
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "webpack-dev-server --hot --open --mode development",
+    "dev": "node app.js & webpack-dev-server --hot --open --mode development",
     "build": "webpack --config webpack.config.js --mode production"
   },
   "repository": {

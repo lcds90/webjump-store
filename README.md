@@ -146,7 +146,7 @@ O título que a aplicação tem é Webjump Store e irá implementar o design sem
 
 <h3 align="center">
 
-:globe_with_meridians: [Deploy](https://api-catalog-list.herokuapp.com/)
+:globe_with_meridians: [Deploy]()
 
 </h3>
 
@@ -181,18 +181,49 @@ O título que a aplicação tem é Webjump Store e irá implementar o design sem
 
 #### :rocket: Execução
 
-`npm run dev`
-
-> Para rodar o projeto localmente .
-
 `npm start`
 
 > Iniciar aplicação através do app.js
 
+`npm run dev`
+
+> Para rodar o projeto localmente, nele antes é inicilizado o server no arquivo app, e logo em seguido o servidor para realização do .
+
+`npm run build`
+> Compila o código em desenvolvimento para ser servido na pasta public
+
 ---
-
-#### Estrutura e organização do código e dos arquivos
-
 #### :gear: Tecnologias utilizadas
 
+1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.
+1. [Redux](https://redux.js.org/): Para gerenciamento de estado da aplicação.
+1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
+1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador
+#### Estrutura e organização do código e dos arquivos
+
+```js
+assessment-frontend
+│   .babelrc // Arquivo de configuração do transpilador
+│   app.js // Arquivo index e de inicialização da aplicação
+│   .package.json // Arquivo de configuração do projeto e listagem de bibliotecas
+│   README.md // Documentação do projeto
+│   webpack.config.js // Arquivo de configuração do webpack
+│
+└───src
+│   │   index.js
+│   │   App.js
+│   │
+│   └───components
+│       │   index.js
+│       │   Navbar
+│       │   ...
+│   
+└───mock-api // Itens mockados
+```
+
 #### Soluções adotadas
+
+Utilizei **React** para o desenvolvimento da aplicação web.
+Fiz a adaptação para conseguir utiliza-lo, implementando webpack e o babel, utilizando as bibliotecas auxiliares em `devDependecies` para compilação e execução do código tanto em produção quanto em desenvolvimento.
+
+Para a parte de _gerenciamento de estado da aplicação_, optei pela implementação com **redux** prevendo _escalabilidade_ na aplicação, pois features novas sempre irão surgir, estar preparado para este gereciamento é menos retrabalho que possa ter.
