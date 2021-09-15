@@ -1,6 +1,7 @@
-var app = require('connect')()
-var serveStatic = require('serve-static')
-var cors = require('cors');
+const app = require('connect')()
+const serveStatic = require('serve-static')
+const cors = require('cors');
+const port = process.env.PORT || 8888;
 
 app.use(cors())
 // Serve up mock-api folder
@@ -14,9 +15,13 @@ function setJsonHeaders (res, path) {
   res.setHeader('Content-type', 'application/json')
 }
 
-// Serve up public folder
-app.use('/', serveStatic('public', {'index': ['index.html', 'index.htm']}))
+function setHeaders (res, path) {
+    res.setHeader('Cache-Control', 'public, max-age=0')
+}
 
-app.listen(8888, function() {
-    console.log('Acesse: http://localhost:8888')
+// Serve up public folder
+app.use('/', serveStatic('public', {'index': ['index.html', 'index.htm'], setHeaders}))
+
+app.listen(port, function() {
+  console.log(`Acesse: http://localhost:${port}`)
 });
