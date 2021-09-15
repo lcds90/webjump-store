@@ -1,4 +1,4 @@
-# Desafio Front-End Webjump
+# WebJump Store
 
 <details>
   <summary>README Original</summary>
@@ -120,3 +120,79 @@
 
 </details>
 
+<div align="center">
+
+_Projeto desenvolvido para processo seletivo na [Webjump](https://webjump.com.br/)_
+
+<img src="./assets/logo-webjump.png" alt="Logo Webjump" width="200"/>
+
+[Sobre](#about) |
+[Checklist](#checklist) |
+[Informações](#informations)
+
+</div>
+
+* * *
+
+## :bookmark_tabs: Sobre o projeto <a name="about"></a>
+
+Nesse projeto foi desenvolvido um **e-commerce** utilizando as tecnologias principais sendo **React**, **Redux**.
+
+O título que a aplicação tem é Webjump Store e irá implementar o design semelhante ao qual foi designado:
+
+<div align="center">
+<img src="./assets/preview.jpg" alt="Layout" width="400"/>
+</div>
+
+<h3 align="center">
+
+:globe_with_meridians: [Deploy](https://api-catalog-list.herokuapp.com/)
+
+</h3>
+
+* * *
+
+## :large_blue_circle: Regras de Negócio <a name="checklist"></a>
+
+- [ ] Criar consulta com a lista de categorias a serem exibidas no menu
+- [ ] Exibir os produtos das categorias.
+- [ ] Funcionalidade de filtro através da sidebar
+- [ ] Fonte padrão: "Open Sans"
+- [ ] Fonte do menu e botão de busca: "Open Sans - Extrabold"
+- [ ] Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
+- [ ] Design responsivo nos breakpoints
+  - [ ] 320px
+  - [ ] 768px
+  - [ ] 1024px
+  - [ ] 1440px
+- [ ] Suporte para navegadores
+  - [ ] IE
+  - [ ] Chrome
+  - [ ] Safari
+  - [ ] Firefox
+- [ ] HTML Semântico
+- [ ] Uso de pré-processadores CSS (Sass, Less)
+- [ ] Acessibilidade
+- [ ] SEO
+- [ ] Performance
+- [ ] Utilizar alguma automatização (Grunt, Gulp, ...)
+
+## :books: Informações <a name="informations"></a>
+
+#### :rocket: Execução
+
+`npm run dev`
+
+> Para rodar o projeto localmente .
+
+`npm start`
+
+> Iniciar aplicação através do app.js
+
+---
+
+#### Estrutura e organização do código e dos arquivos
+
+#### :gear: Tecnologias utilizadas
+
+#### Soluções adotadas
