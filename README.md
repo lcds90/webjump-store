@@ -3,120 +3,135 @@
 <details>
   <summary>README Original</summary>
 
-  # Quer ser desenvolvedor frontend na Webjump?
-  Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e  JavaScript).
+# Quer ser desenvolvedor frontend na Webjump?
 
-  ## O teste
-  O desafio é tornar o layout abaixo em uma página funcional.  
-  Não existe certo ou errado, queremos ver como você se sai em situações reais, como este   desafio.   
-  O tempo necessário para completar o desafio dependerá da sua experiência e ferramentas  escolhidas.
+Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).
 
-  Portanto, dê o seu melhor!
+## O teste
 
-  :warning: **OBS:** Os layouts podem ser encontrados na pasta **layout**
+O desafio é tornar o layout abaixo em uma página funcional.  
+ Não existe certo ou errado, queremos ver como você se sai em situações reais, como este desafio.  
+ O tempo necessário para completar o desafio dependerá da sua experiência e ferramentas escolhidas.
 
-  ![Layout](assets/preview.jpg)
+Portanto, dê o seu melhor!
 
-  ## Instruções
-  - Os arquivos do layout estão no diretório assets deste repositório
-  - O conteúdo não é estático. Você deve criar um JavaScript para consultar a lista de  categorias a serem exibidas no menu e também para exibir os produtos das categorias.  
+:warning: **OBS:** Os layouts podem ser encontrados na pasta **layout**
+
+![Layout](assets/preview.jpg)
+
+## Instruções
+
+- Os arquivos do layout estão no diretório assets deste repositório
+- O conteúdo não é estático. Você deve criar um JavaScript para consultar a lista de categorias a serem exibidas no menu e também para exibir os produtos das categorias.  
   Os dados serão fornecidos por uma API. As instruções estão mais abaixo.
-  - Fonte padrão: "Open Sans"
-  - Fonte do menu e botão de busca: "Open Sans - Extrabold"
-  - As imagens dos produtos estão no diretório public/media
-  - Você pode utilizar as tecnologias e bibliotecas que achar melhor (frameworks ou bibliotecas   JS / CSS)
-  - Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-  - Se necessário explique também como rodar o seu projeto
+- Fonte padrão: "Open Sans"
+- Fonte do menu e botão de busca: "Open Sans - Extrabold"
+- As imagens dos produtos estão no diretório public/media
+- Você pode utilizar as tecnologias e bibliotecas que achar melhor (frameworks ou bibliotecas JS / CSS)
+- Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
+- Se necessário explique também como rodar o seu projeto
 
-  ## Requisitos
-  - Design responsivo nos breakpoints 320px, 768px, 1024px e 1440px
-  - Suporte para IE, Chrome, Safari, Firefox
-  - Semântica
+## Requisitos
 
-  ## Diferenciais
-  - Uso de pré-processadores CSS (Sass, Less)
-  - Acessibilidade
-  - SEO
-  - Performance
-  - Fazer os filtros da sidebar funcionarem através de Javascript
-  - Utilizar alguma automatização (Grunt, Gulp, ...)
+- Design responsivo nos breakpoints 320px, 768px, 1024px e 1440px
+- Suporte para IE, Chrome, Safari, Firefox
+- Semântica
 
-  ## O que será avaliado
-  - Estrutura e organização do código e dos arquivos
-  - Soluções adotadas
-  - Tecnologias utilizadas
-  - Qualidade
-  - Fidelidade ao layout
-  - Enfim, tudo será observado e levado em conta
+## Diferenciais
 
-  ## Como iniciar o desenvolvimento
-  - Instale o [npm](https://nodejs.org/en/download/)
-  - Fork este repositório na sua conta do Bitbucket
-  - Crie uma branch com o nome **desafio**
-  - Instale as dependências
-  ```
-  npm install
-  ```
-  - Rode a aplicação
-  ```
-  npm start
-  ```
-  - Acesse http://localhost:8888
-  - Realize o desenvolvimento na pasta public
+- Uso de pré-processadores CSS (Sass, Less)
+- Acessibilidade
+- SEO
+- Performance
+- Fazer os filtros da sidebar funcionarem através de Javascript
+- Utilizar alguma automatização (Grunt, Gulp, ...)
 
-  ## Como enviar seu teste
-  - Envie um email para [carreira@webjump.com.br] com o link do seu repositório
+## O que será avaliado
 
-  - Se o seu repositório for privado, solicite os emails das pessoas responsáveis para conceder   acesso de leitura ao seu repositório.
+- Estrutura e organização do código e dos arquivos
+- Soluções adotadas
+- Tecnologias utilizadas
+- Qualidade
+- Fidelidade ao layout
+- Enfim, tudo será observado e levado em conta
 
-  ## API
-  - Categorias: http://localhost:8888/api/V1/categories/list  
+## Como iniciar o desenvolvimento
+
+- Instale o [npm](https://nodejs.org/en/download/)
+- Fork este repositório na sua conta do Bitbucket
+- Crie uma branch com o nome **desafio**
+- Instale as dependências
+
+```
+npm install
+```
+
+- Rode a aplicação
+
+```
+npm start
+```
+
+- Acesse http://localhost:8888
+- Realize o desenvolvimento na pasta public
+
+## Como enviar seu teste
+
+- Envie um email para [carreira@webjump.com.br] com o link do seu repositório
+
+- Se o seu repositório for privado, solicite os emails das pessoas responsáveis para conceder acesso de leitura ao seu repositório.
+
+## API
+
+- Categorias: http://localhost:8888/api/V1/categories/list  
   O endpoint de categoria deve ser utilizado para montar o menu do cabeçalho.
 
-  **Response**
-  ```
-  {
-    "items": [
+**Response**
+
+```
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Camisetas",
+      "path": "camisetas"
+    },
+    ...
+  ]
+}
+```
+
+- Produtos da Categoria: http://localhost:8888/api/V1/categories/{id}  
+  O endpoint de produtos da categoria deve ser consumido para listar os produtos da categoria quando o usuário clicar em um dos menus.
+
+**Response**
+
+```
+{
+  "filters": [
       {
-        "id": 1,
-        "name": "Camisetas",
-        "path": "camisetas"
-      },
-      ...
-    ]
-  }
-  ```
-
-  - Produtos da Categoria: http://localhost:8888/api/V1/categories/{id}  
-  O endpoint de produtos da categoria deve ser consumido para listar os produtos da categoria   quando o usuário clicar em um dos menus.
-
-  **Response**
-  ```
-  {
-    "filters": [
+          "color": "Cor"
+      }
+  ],
+  "items": [
+    {
+      "id": 31,
+      "sku": "sku-31",
+      "path": "tenis-preto-couro",
+      "name": "Tênis Preto Couro",
+      "image": "media/shoes-1.jpg",
+      "price": 129.9,
+      "specialPrice": 80, //Optional
+      "filter": [
         {
-            "color": "Cor"
+          "color": "Preta"
         }
-    ],
-    "items": [
-      {
-        "id": 31,
-        "sku": "sku-31",
-        "path": "tenis-preto-couro",
-        "name": "Tênis Preto Couro",
-        "image": "media/shoes-1.jpg",
-        "price": 129.9,
-        "specialPrice": 80, //Optional
-        "filter": [
-          {
-            "color": "Preta"
-          }
-        ]
-      },
-      ...
-    ]
-  }
-  ```
+      ]
+    },
+    ...
+  ]
+}
+```
 
 </details>
 
@@ -132,7 +147,7 @@ _Projeto desenvolvido para processo seletivo na [Webjump](https://webjump.com.br
 
 </div>
 
-* * *
+---
 
 ## :bookmark_tabs: Sobre o projeto <a name="about"></a>
 
@@ -150,7 +165,7 @@ O título que a aplicação tem é Webjump Store e irá implementar o design sem
 
 </h3>
 
-* * *
+---
 
 ## :large_blue_circle: Regras de Negócio <a name="checklist"></a>
 
@@ -190,15 +205,18 @@ O título que a aplicação tem é Webjump Store e irá implementar o design sem
 > Para rodar o projeto localmente, nele antes é inicilizado o server no arquivo app, e logo em seguido o servidor para realização do .
 
 `npm run build`
+
 > Compila o código em desenvolvimento para ser servido na pasta public
 
 ---
+
 #### :gear: Tecnologias utilizadas
 
 1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.
 1. [Redux](https://redux.js.org/): Para gerenciamento de estado da aplicação.
 1. [Babel](https://babeljs.io/): Transcompilador de JavaScript convertendo o código em versões o quais é possível ser executada por mecanismos Javascript mais antigos.
 1. [webpack](https://webpack.js.org/): Empacotador de módulo JavaScript para execução no navegador
+
 #### Estrutura e organização do código e dos arquivos
 
 ```js
@@ -217,7 +235,7 @@ assessment-frontend
 │       │   index.js
 │       │   Navbar
 │       │   ...
-│   
+│
 └───mock-api // Itens mockados
 ```
 
