@@ -19,7 +19,7 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 ---
 
-## :large_blue_circle: Regras de Negócio
+## 📜 Regras de Negócio
 
 - ⚪ Criar consulta com a lista de categorias a serem exibidas no menu
 - ⚪ Exibir os produtos das categorias.
