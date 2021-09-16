@@ -1,22 +1,96 @@
-.header {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    color:white;
-    font-size:0.75rem;
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+/* SECTION Top Nav */
+
+.top {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
 }
 
 .links {
-    color:white;
-    margin-inline:10px;
+  color: white;
+  margin-inline: 10px;
 }
 
-.isDark {
-    background: var(--header-dark);
+.isDarkTop {
+  background: var(--header-dark);
 }
 
-.isLight {
-    background: var(--header-light);
+.isLightTop {
+  background: var(--header-light);
 }
+
+/* !SECTION */
+/* SECTION Search */
+
+.searchAndLogo {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: 1fr / 1fr 2fr;
+  place-items: center;
+  padding: 25px;
+}
+
+.searchAndLogo > div {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  position: relative;
+}
+
+.searchAndLogo > div > img {
+  width: 50%;
+}
+
+.searchAndLogo > div > span {
+  color: grey;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-60%, 40%);
+}
+
+.label {
+  width: 50%;
+  height: 70%;
+  display: grid;
+  grid: 1fr / 5fr 1fr;
+}
+
+.label > input {
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px 0 0 5px;
+}
+
+.label > button {
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.isDarkSearch {
+  background: var(--background-dark);
+}
+
+.isLightSearch {
+  background: var(--background-light);
+}
+
+/* !SECTION */

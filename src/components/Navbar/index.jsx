@@ -5,15 +5,23 @@ import styles from './Navbar.module.css';
 
 const { article, nav, section } = styles;
 
-const Navbar = ({ className, navItems }) => (
-  <nav className={`${className} ${nav}`}>
-    <section className={section}>
-      {navItems.map(({ label, link }) => (
-        <article className={article}>
-          <Link to={link}>{label}</Link>
-        </article>
-      ))}
-    </section>
+const navItems = [
+  { label: 'Página Inicial', link: '/' },
+  { label: 'Camisetas', link: '/' },
+  { label: 'Calças', link: '/' },
+  { label: 'Sapatos', link: '/' },
+  { label: 'Contato', link: '/' },
+];
+
+const Navbar = () => (
+  <nav className={nav}>
+
+    {navItems.map(({ label, link }) => (
+      <article className={article}>
+        <Link to={link}>{label}</Link>
+      </article>
+    ))}
+
   </nav>
 );
 
