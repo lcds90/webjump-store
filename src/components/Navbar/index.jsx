@@ -2,28 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import useCategories from '../../hooks/useCategories';
 
-const { article, nav, section } = styles;
+const { article, nav } = styles;
 
-const navItems = [
-  { label: 'Página Inicial', link: '/' },
-  { label: 'Camisetas', link: '/' },
-  { label: 'Calças', link: '/' },
-  { label: 'Sapatos', link: '/' },
-  { label: 'Contato', link: '/' },
-];
+const Navbar = () => {
+  const {
+    categories, selected, loading, error,
+  } = useCategories();
 
-const Navbar = () => (
-  <nav className={nav}>
-
-    {navItems.map(({ label, link }) => (
+  const renderCategories = () => (
+    <>
       <article className={article}>
-        <Link to={link}>{label}</Link>
+        <Link to="/">Página Inicial</Link>
       </article>
-    ))}
+      {categories.map(({ name, path }) => (
+        <article className={article}>
+          <Link to={path}>{name}</Link>
+        </article>
+      ))}
+      <article className={article}>
+        <Link to="/contact">Contato</Link>
+      </article>
+    </>
+  );
 
-  </nav>
-);
+  if (error) return <div>Houve algum erro</div>;
+
+  return (
+    <nav className={nav}>
+      {loading ? 'Carregando' : renderCategories()}
+    </nav>
+  );
+};
 
 const { arrayOf, shape, string } = PropTypes;
 

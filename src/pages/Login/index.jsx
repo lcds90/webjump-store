@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Navbar } from '../../components';
+import { Aside, Header, Navbar } from '../../components';
 import styles from './Login.module.css';
 
 const { main, content, footer } = styles;
@@ -9,7 +9,7 @@ const Store = () => (
     <Header />
     <Navbar />
     <section className={content}>
-      <aside>categorias</aside>
+      <Aside />
       <article>cinza</article>
       <article>
         <h1>Seja bem vindo</h1>
