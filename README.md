@@ -24,26 +24,26 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 - ⚪ Criar consulta com a lista de categorias a serem exibidas no menu
 - ⚪ Exibir os produtos das categorias.
 - ⚪ Funcionalidade de filtro através da sidebar
-- ⚪ Fonte padrão: "Open Sans"
-- ⚪ Fonte do menu e botão de busca: "Open Sans - Extrabold"
-- ⚪ Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
+- ☑️ Fonte padrão: "Open Sans"
+- ☑️ Fonte do menu e botão de busca: "Open Sans - Extrabold"
+- ☑️ Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
 - ⚪ Design responsivo nos breakpoints
   - ⭕ 320px
   - ⭕ 768px
   - ⭕ 1024px
   - ⭕ 1440px
-- ⚪ Suporte para navegadores
+- ☑️ Implementação do react com webpack e babel
+- ☑️ Suporte para navegadores (babel/webpack)
   - ⭕ IE
   - ⭕ Chrome
   - ⭕ Safari
   - ⭕ Firefox
-- ⚪ HTML Semântico
+- ☑️ HTML Semântico
 - ⚪ Uso de pré-processadores CSS (Sass, Less)
 - ⚪ Acessibilidade
 - ⚪ SEO
 - ⚪ Performance
 - ⚪ Utilizar alguma automatização (Grunt, Gulp, ...)
-- ☑️ Implementação do react com webpack e babel
 
 ## :books: Informações
 

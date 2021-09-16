@@ -17,21 +17,22 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackTagsPlugin({
+      links: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'],
       metas: [
         {
           path: 'width=device-width, initial-scale=1',
           attributes: {
-            name: 'viewport'
-          }
+            name: 'viewport',
+          },
         },
         {
           path: 'Web site created using create-react-app',
           attributes: {
-            name: 'description'
-          }
-        }
-      ]
-    })
+            name: 'description',
+          },
+        },
+      ],
+    }),
   ],
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],
@@ -55,19 +56,19 @@ module.exports = {
               modules: {
                 localIdentName: '[name]_[local]_[hash:base64:5]',
               },
-              
-            }
-          }
+
+            },
+          },
         ],
-        include: /\.module\.css$/
+        include: /\.module\.css$/,
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
         ],
-        exclude: /\.module\.css$/
+        exclude: /\.module\.css$/,
       },
       {
         test: /\.png|svg|jpg|gif$/,
@@ -77,6 +78,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    
-  }
+
+  },
 };

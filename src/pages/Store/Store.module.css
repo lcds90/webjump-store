@@ -1,5 +1,28 @@
 .main {
-    width: 100vw;
-    height:100vh;
-    background:black;
+  width: 100vw;
+  height: 100vh;
+  background: grey;
+  display: grid;
+  grid: 0.25fr 1fr 5fr 1fr / 1fr;
+}
+
+.header {
+    background: red;
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    background: green;
+    width: 100%;
+    height: 100%;
+}
+.content {
+    background: yellow;
+    width: 100%;
+    height: 100%;
+}
+.footer {
+    background: blue;
+    width: 100%;
+    height: 100%;
 }
