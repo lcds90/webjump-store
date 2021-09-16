@@ -1,34 +1,34 @@
 import {
-  GET_PRODUCTS,
-  GET_PRODUCTS_FAIL,
-  GET_PRODUCTS_SUCCESS,
+  GET_CATEGORIES,
+  GET_CATEGORIES_FAIL,
+  GET_CATEGORIES_SUCCESS,
 } from '../actions';
 
 const INITIAL_STATE = {
-  products: [],
-  selected: [],
+  categories: [],
+  selected: '',
   loading: false,
   error: false,
 };
 
 const userReducer = (state = INITIAL_STATE, { payload, type }) => {
   switch (type) {
-    case GET_PRODUCTS:
+    case GET_CATEGORIES:
       return {
         ...state,
         loading: true,
       };
-    case GET_PRODUCTS_FAIL:
+    case GET_CATEGORIES_FAIL:
       return {
         ...state,
         loading: false,
         error: true,
       };
-    case GET_PRODUCTS_SUCCESS:
+    case GET_CATEGORIES_SUCCESS:
       return {
         ...state,
         loading: false,
-        products: payload,
+        categories: payload,
       };
 
     default:

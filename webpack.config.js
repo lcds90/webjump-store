@@ -17,7 +17,17 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackTagsPlugin({
-      links: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap'],
+      links: [
+        {
+          path: 'https://fonts.googleapis.com',
+          attributes: {
+
+          },
+        },
+        'https://fonts.gstatic.com',
+        'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap',
+
+      ],
       metas: [
         {
           path: 'width=device-width, initial-scale=1',

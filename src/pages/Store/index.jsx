@@ -1,22 +1,21 @@
 import React from 'react';
 import { Header, Navbar } from '../../components';
-import { headerItems, navItems } from './helpers';
 import styles from './Store.module.css';
 
 const {
-  main, nav, content, footer,
+  main, content, footer,
 } = styles;
 
 const Store = () => (
   <main className={main}>
-    <Header headerItems={headerItems} />
-    <Navbar className={nav} navItems={navItems} />
+    <Header />
+    <Navbar />
     <section className={content}>
       <aside>categorias</aside>
       <article>cinza</article>
       <article>texto</article>
+      <footer className={footer}>footer</footer>
     </section>
-    <footer className={footer}>footer</footer>
   </main>
 );
 
