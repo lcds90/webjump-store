@@ -15,7 +15,7 @@ const Categories = () => {
       </li>
       {categories.map(({ name, path }) => (
         <li className={li}>
-          <Link to={path}>{name}</Link>
+          <Link to={`/store/${path}`}>{name}</Link>
         </li>
       ))}
       <li className={li}>

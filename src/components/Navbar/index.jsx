@@ -18,7 +18,7 @@ const Navbar = () => {
       </article>
       {categories.map(({ name, path }) => (
         <article className={article}>
-          <Link to={path}>{name}</Link>
+          <Link to={`/store/${path}`}>{name}</Link>
         </article>
       ))}
       <article className={article}>
