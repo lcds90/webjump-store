@@ -1,26 +1,28 @@
 .main {
-    width: 100vw;
-    height: 100vh;
-    background: grey;
-    display: grid;
-    grid: 1fr 1fr 10fr / 1fr;
+  width: 100vw;
+  min-height: 100vh;
+  background: grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25vh 10vh max-content;
+  max-width:100%;
 }
 
 .content {
-    background: var(--background-light);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid: 1fr 1.5fr 1fr/ 1fr 5fr;
-    gap: 20px;
-    padding: 15px;
-    overflow:auto;
+  background: var(--background-light);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: 8fr 1fr/ 1fr 5fr;
+  place-items: center;
+  padding: 15px;
 }
 
 .listContainer {
   background: var(--background-light);
   display: grid;
   grid: 1fr 20fr / 1fr;
+  height: 100%;
 }
 
 .listTitle {
@@ -35,9 +37,30 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 1fr;
+  place-items: center;
+}
+
+.productItem {
+  display: grid;
+  text-transform: uppercase;
+  grid: 50% 15% 15% 20% / 1fr;
+  width: 100%;
+  height: 100%;
+  place-items:center;
+}
+
+.productItem > div {
+  width: 100%;
+  height: 100%;
+}
+
+.productItem > div > img {
+  height:100%;
 }
 
 .content > footer {
   background: var(--primary);
   grid-column: span 2;
+  width: 100%;
+  height: 100%;
 }

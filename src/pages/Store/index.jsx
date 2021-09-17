@@ -6,7 +6,7 @@ import styles from './Store.module.css';
 import { getAllProducts, getProducts } from '../../redux/actions';
 
 const {
-  main, content, footer, list, listContainer, listTitle,
+  main, content, footer, list, listContainer, listTitle, productItem,
 } = styles;
 
 const Store = () => {
@@ -37,13 +37,16 @@ const Store = () => {
             {items.map(({
               sku, path, name, image, price,
             }) => (
-              <article key={sku}>
-                <div>{name}</div>
+              <article className={productItem} key={sku}>
                 <div>
                   <img src={`/${image}`} alt={`Imagem do produto ${name}`} />
                 </div>
+                <div>{name}</div>
                 <div>
-                  {price}
+                  {`R$ ${price.toFixed(2)}`}
+                </div>
+                <div>
+                  <button>Comprar</button>
                 </div>
               </article>
             ))}
