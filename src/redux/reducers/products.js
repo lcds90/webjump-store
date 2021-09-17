@@ -5,7 +5,8 @@ import {
 } from '../actions';
 
 const INITIAL_STATE = {
-  products: [],
+  filters: [],
+  items: [],
   selected: [],
   loading: false,
   error: false,
@@ -28,7 +29,8 @@ const userReducer = (state = INITIAL_STATE, { payload, type }) => {
       return {
         ...state,
         loading: false,
-        products: payload,
+        filters: payload.filters,
+        items: payload.items,
       };
 
     default:

@@ -1,27 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useHistory } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import useCategories from '../../hooks/useCategories';
 
-const { article, nav } = styles;
+const { article, nav, selected } = styles;
 
 const Navbar = () => {
+  const { location: { pathname } } = useHistory();
+  const { id } = useParams();
   const {
-    categories, selected, loading, error,
+    categories, loading, error,
   } = useCategories();
 
   const renderCategories = () => (
     <>
-      <article className={article}>
+      <article className={!id && pathname === '/' ? selected : article}>
         <Link to="/">Página Inicial</Link>
       </article>
       {categories.map(({ name, path }) => (
-        <article className={article}>
+        <article key={path} className={id === path ? selected : article}>
           <Link to={`/store/${path}`}>{name}</Link>
         </article>
       ))}
-      <article className={article}>
+      <article className={!id && pathname === '/contact' ? selected : article}>
         <Link to="/contact">Contato</Link>
       </article>
     </>
@@ -34,13 +35,6 @@ const Navbar = () => {
       {loading ? 'Carregando' : renderCategories()}
     </nav>
   );
-};
-
-const { arrayOf, shape, string } = PropTypes;
-
-Navbar.propTypes = {
-  className: string.isRequired,
-  navItems: arrayOf(shape({ name: string, link: string })).isRequired,
 };
 
 export default Navbar;

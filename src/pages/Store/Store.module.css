@@ -3,7 +3,7 @@
     height: 100vh;
     background: grey;
     display: grid;
-    grid: 1fr 0.75fr 10fr / 1fr;
+    grid: 1fr 1fr 10fr / 1fr;
 }
 
 .content {
@@ -17,18 +17,24 @@
     overflow:auto;
 }
 
-.content > aside {
-  background: var(--aside-light);
-  grid-row: span 2;
+.listContainer {
+  background: var(--background-light);
+  display: grid;
+  grid: 1fr 20fr / 1fr;
 }
 
-.content > article:nth-of-type(1) {
-  background: var(--container-light);
+.listTitle {
+  grid-column: span 4;
+  color: var(--primary);
+  font-weight: 400;
+  border-bottom: blue 2px solid;
 }
 
-.content > article:nth-of-type(1) > h1 {
-  background: var(--container-light);
-  font-weight:300;
+.list {
+  background: var(--background-light);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
 }
 
 .content > footer {

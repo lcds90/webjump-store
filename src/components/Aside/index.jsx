@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useCategories from '../../hooks/useCategories';
 import styles from './Aside.module.css';
+import useCategories from '../../hooks/useCategories';
 
 const Categories = () => {
   const { aside, li, ul } = styles;
@@ -14,7 +14,7 @@ const Categories = () => {
         <Link to="/">Página Inicial</Link>
       </li>
       {categories.map(({ name, path }) => (
-        <li className={li}>
+        <li key={path} className={li}>
           <Link to={`/store/${path}`}>{name}</Link>
         </li>
       ))}
