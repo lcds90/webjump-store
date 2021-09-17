@@ -9,11 +9,18 @@ export const fetchCategories = async () => {
     return Promise.reject(error);
   }
 };
-export const fetchProductList = (id) => {
-  fetch(`${BASE_API}/categories/${id}`)
-    .then((response) => (
-      response
-        .json()
-        .then((json) => (response.ok ? Promise.resolve(json) : Promise.reject(json)))
-    ));
+export const fetchProductList = async (id) => {
+  const verifyId = {
+    camisetas: '1',
+    calcas: '2',
+    calcados: '3',
+  };
+
+  try {
+    const response = await fetch(`${BASE_API}/categories/${verifyId[id]}`);
+    const json = await response.json();
+    return Promise.resolve(json);
+  } catch (error) {
+    return Promise.reject(error);
+  }
 };

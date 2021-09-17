@@ -1,13 +1,22 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Login, Store } from './pages';
-import './App.css';
+import { Header, Navbar } from './components';
+import styles from './App.module.css';
+const {
+  main, content, footer, list, listContainer, listTitle, productItem,
+} = styles;
 
 const App = () => (
-  <Switch>
-    <Route exact path="/store" component={Store} />
-    <Route exact path="/" component={Login} />
-  </Switch>
+  <main className={main}>
+    <Header />
+    <Navbar />
+    <Switch>
+      <Route path='/store/:id' component={Store} />
+      <Route path='/store' component={Store} />
+      <Route path='/' component={Login} />
+    </Switch>
+  </main>
 );
 
 export default App;

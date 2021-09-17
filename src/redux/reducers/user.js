@@ -7,14 +7,14 @@ const INITIAL_STATE = {
 
 const userReducer = (state = INITIAL_STATE, { payload, type }) => {
   switch (type) {
-  case USER_INFO:
-    return {
-      email: payload.email,
-      name: payload.password,
-    };
+    case USER_INFO:
+      return {
+        email: payload.email,
+        name: payload.password,
+      };
 
-  default:
-    return state;
+    default:
+      return state;
   }
 };
 
