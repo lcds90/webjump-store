@@ -1,13 +1,3 @@
-.main {
-  width: 100vw;
-  min-height: 100vh;
-  background: grey;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25vh 10vh max-content;
-  max-width: 100%;
-}
-
 .content {
   background: var(--background-light);
   width: 100%;

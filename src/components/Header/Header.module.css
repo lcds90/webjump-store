@@ -14,11 +14,12 @@
   justify-content: flex-end;
   align-items: center;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 
 .links {
   color: white;
+  font-weight: bolder;
   margin-inline: 10px;
 }
 

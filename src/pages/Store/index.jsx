@@ -19,42 +19,38 @@ const Store = () => {
   const dispatch = useDispatch();
   const {
     error, filters, items, loading, selected,
-  } = useSelector((state) => state.products);
+  } = useSelector(
+    (state) => state.products,
+  );
   useEffect(() => {
     if (id) dispatch(getProducts(id));
     else dispatch(getAllProducts());
   }, [id]);
 
   return (
-    <main className={main}>
-      <Header />
-      <Navbar />
-      <section className={content}>
-        <Aside />
-        <article className={listContainer}>
-          <h2 className={listTitle}>{verifyId[id]}</h2>
-          <section className={list}>
-            {items.map(({
-              sku, path, name, image, price,
-            }) => (
-              <article className={productItem} key={sku}>
-                <div>
-                  <img src={`/${image}`} alt={`Imagem do produto ${name}`} />
-                </div>
-                <div>{name}</div>
-                <div>
-                  {`R$ ${price.toFixed(2)}`}
-                </div>
-                <div>
-                  <button type="button">Comprar</button>
-                </div>
-              </article>
-            ))}
-          </section>
-        </article>
-        <footer className={footer}>footer</footer>
-      </section>
-    </main>
+    <section className={content}>
+      <Aside />
+      <article className={listContainer}>
+        <h2 className={listTitle}>{verifyId[id]}</h2>
+        <section className={list}>
+          {items.map(({
+            sku, path, name, image, price,
+          }) => (
+            <article className={productItem} key={sku}>
+              <div>
+                <img src={`/${image}`} alt={`Imagem do produto ${name}`} />
+              </div>
+              <div>{name}</div>
+              <div>{`R$ ${price.toFixed(2)}`}</div>
+              <div>
+                <button type="button">Comprar</button>
+              </div>
+            </article>
+          ))}
+        </section>
+      </article>
+      <footer className={footer}>footer</footer>
+    </section>
   );
 };
 

@@ -19,7 +19,7 @@ const getCategories = () => (
     dispatch(categoriesFetch());
     try {
       const { items } = await fetchCategories();
-      // return setTimeout(() => dispatch(categoriesFetchSuccess(items)), 1000);
+      // return setTimeout(() => dispatch(categoriesFetchSuccess(items)), 3000);
       return dispatch(categoriesFetchSuccess(items));
     } catch {
       return dispatch(categoriesFetchFail());

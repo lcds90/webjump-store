@@ -9,8 +9,7 @@
 .ul {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.15fr;
-  grid-auto-rows: 0.15fr;
+  grid-auto-rows: 3rem;
 }
 
 .li > a {
