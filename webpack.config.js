@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackTagsPlugin = require('html-webpack-tags-plugin');
 
 const path = require('path');
 
@@ -16,35 +15,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       inject: 'body',
+      meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     }),
     new MiniCssExtractPlugin(),
-    new HtmlWebpackTagsPlugin({
-      links: [
-        {
-          path: 'https://fonts.googleapis.com',
-          attributes: {
-
-          },
-        },
-        'https://fonts.gstatic.com',
-        'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap',
-
-      ],
-      metas: [
-        {
-          path: 'width=device-width, initial-scale=1',
-          attributes: {
-            name: 'viewport',
-          },
-        },
-        {
-          path: 'Web site created using create-react-app',
-          attributes: {
-            name: 'description',
-          },
-        },
-      ],
-    }),
   ],
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],

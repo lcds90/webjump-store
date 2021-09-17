@@ -1,28 +1,32 @@
-import React from 'react';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import useCategories from '../../hooks/useCategories';
 
 const { article, nav, selected } = styles;
 
 const Navbar = () => {
-  const { location: { pathname } } = useHistory();
-  const { id } = useParams();
+  const { pathname } = useLocation();
+  const [statePath, verifyPath] = useState('');
   const {
     categories, loading, error,
   } = useCategories();
 
+  useEffect(() => {
+    verifyPath(pathname);
+  }, [pathname]);
+
   const renderCategories = () => (
     <>
-      <article className={!id && pathname === '/' ? selected : article}>
+      <article className={statePath === '/' ? selected : article}>
         <Link to="/">Página Inicial</Link>
       </article>
       {categories.map(({ name, path }) => (
-        <article key={path} className={id === path ? selected : article}>
+        <article key={path} className={statePath.includes(path) ? selected : article}>
           <Link to={`/store/${path}`}>{name}</Link>
         </article>
       ))}
-      <article className={!id && pathname === '/contact' ? selected : article}>
+      <article className={statePath.includes('contact') ? selected : article}>
         <Link to="/contact">Contato</Link>
       </article>
     </>

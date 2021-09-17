@@ -1,10 +1,17 @@
 .aside {
-  display: grid;
-  padding: 10px 30px;
-  grid-template-rows: 1fr;
-  height: 100%;
-  width: 100%;
+  display: none;
 }
+
+
+@media screen and (min-width: 768px){
+  .aside {
+    display: grid;
+    padding: 10px 30px;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+  }
+
 
 .ul {
   display: grid;
@@ -15,4 +22,5 @@
 .li > a {
     color:black;
     text-decoration: none;
+}
 }
