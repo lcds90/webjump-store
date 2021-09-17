@@ -46,7 +46,7 @@ const Store = () => {
                   {`R$ ${price.toFixed(2)}`}
                 </div>
                 <div>
-                  <button>Comprar</button>
+                  <button type="button">Comprar</button>
                 </div>
               </article>
             ))}
