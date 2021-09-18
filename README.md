@@ -14,7 +14,7 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 ![Layout](assets/preview.jpg)
 
-:globe_with_meridians: [Deploy](https://webjump-store-2hp9l7pxa-lcds90.vercel.app/)
+:globe_with_meridians: [Deploy](https://web-jump-store.vercel.app/)
 
 Possuo dois projetos semelhantes ao referente ao desafio qual foi me dado
 
