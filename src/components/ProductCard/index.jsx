@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './ProductCard.module.css';
 
-const { productItem } = style;
+const {
+  productItem, containerPrice, offer, stylePrice,
+} = style;
 const ProductCard = ({
   product: {
-    image, name, price, sku,
+    image, name, price, sku, specialPrice,
   },
 }) => {
   const addItemToCart = () => {};
@@ -15,7 +17,16 @@ const ProductCard = ({
         <img src={`/${image}`} alt={`Imagem do produto ${name}`} />
       </div>
       <div>{name}</div>
-      <div>{`R$ ${price.toFixed(2)}`}</div>
+      <div className={containerPrice}>
+        { specialPrice
+          ? (
+            <>
+              <span className={offer}>{`R$ ${specialPrice}`}</span>
+              <span className={stylePrice}>{`R$ ${price.toFixed(2)}`}</span>
+            </>
+          )
+          : (<span className={stylePrice}>{`R$ ${price.toFixed(2)}`}</span>)}
+      </div>
       <div>
         <button type="button">Comprar</button>
       </div>

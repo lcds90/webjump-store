@@ -27,7 +27,7 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 - ☑️ Fonte padrão: "Open Sans"
 - ☑️ Fonte do menu e botão de busca: "Open Sans - Extrabold"
 - ☑️ Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-- ⚪ Design responsivo nos breakpoints
+- ☑️ Design responsivo nos breakpoints
   - ⭕ 320px
   - ⭕ 768px
   - ⭕ 1024px
