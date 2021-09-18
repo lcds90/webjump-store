@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAIL,
   GET_PRODUCTS_SUCCESS,
+  SELECT_FILTER,
 } from './types';
 import { fetchProductList } from '../../services';
 
@@ -47,6 +48,12 @@ const productsAllFetchFail = () => ({
   type: GET_ALL_PRODUCTS_FAIL,
 });
 
+export const sendSelectedFilter = (payload) => ({
+  type: SELECT_FILTER,
+  payload,
+});
+
+// IMPLEMENTANDO COM BUSCA
 export const getAllProducts = () => (
   async (dispatch) => {
     dispatch(productsAllFetch());
@@ -61,7 +68,7 @@ export const getAllProducts = () => (
       Object.values(verifyId).reduce(async (promise, idValue) => {
         await promise;
         const contents = await fetchProductList(idValue);
-        console.log(contents);
+        // console.log(contents);
       }, Promise.resolve());
       // return setTimeout(() => dispatch(productsFetchSuccess(items)), 1000);
       return dispatch(productsAllFetchSuccess({ filters, items }));

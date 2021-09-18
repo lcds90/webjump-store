@@ -17,12 +17,15 @@ const Store = () => {
     calcados: 'Calçados',
   };
   const dispatch = useDispatch();
-  const { error, items, loading } = useSelector((state) => state.products);
+  const {
+    error, items, loading, selectedFilter,
+  } = useSelector((state) => state.products);
   useEffect(() => {
     if (id) dispatch(getProducts(id));
     else dispatch(getAllProducts());
   }, [id]);
-
+  const { key, value } = selectedFilter;
+  const filteredItems = items.filter(({ filter }) => filter.some((opt) => opt[key] === value));
   return (
     <section className={content}>
       <Filter />
@@ -32,9 +35,9 @@ const Store = () => {
           Ordernar por
         </section>
         <section className={list}>
-          {items.map((product) => (
-            <ProductCard product={product} />
-          ))}
+          {selectedFilter && !(key === '' && value === '')
+            ? filteredItems.map((product) => <ProductCard product={product} />)
+            : items.map((product) => <ProductCard product={product} />)}
         </section>
       </article>
       <footer className={footer}>footer</footer>
