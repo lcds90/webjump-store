@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { sendSelectedFilter } from '../../redux/actions';
 import styles from './Filter.module.css';
 
@@ -59,7 +58,9 @@ const AsideFilters = () => {
                 <article>
                   {`Filtar por ${filterValue[1]}`}
                   <select
-                    onChange={({ target: { value } }) => setSelectedFilter({ key: filterValue[0], value })}
+                    onChange={(
+                      event,
+                    ) => setSelectedFilter({ key: filterValue[0], value: event.target.value })}
                   >
                     {uniqueValues.map((value) => (
                       <option>{value}</option>

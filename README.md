@@ -50,25 +50,23 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 #### :rocket: Execução
 
 `npm start`
-
 > Iniciar aplicação através do app.js, nota: Antes de entrar no html servido pela pasta public, rode o comando npm run build para a versão mais recente em produção 
 
 `npm run dev`
-
-> Para rodar o projeto localmente, nele antes é inicilizado o server no arquivo app, e logo em seguido o servidor para realização do .
+> Para rodar o projeto localmente, nele antes é inicilizado o server no arquivo app, e logo em seguido o servidor referente ao ambiente de desenvolvimento.
 
 `npm run build`
-
 > Compila o código em desenvolvimento para ser servido na pasta public
 
 ##### Detalhe
 Como estava em um ambiente configurado previamente para servir a API, optei pela opção de instalar o webpack e configurar-lo manualmente, porém estou com um problema nas configurações do webpack, as rotas estão funcionando corretamente no ambiente de desenvolvimento, porém em produção (`npm start`) está gerando o erro CANNOT GET {url}
-Lista com possíveis soluções tentadas até o momento.
 
-[Post](https://medium.com/fredwong-it/react-router-v4-nested-routes-not-work-with-webpack-dev-server-50a2cf32e46e)
-[Post 2](https://ui.dev/react-router-cannot-get-url-refresh/)
+O que acontece é que o arquivo index.html quando é gerado no build ele acaba deixando os bundles passados presentes em seu corpo e está dando um erro referente a  isso, porém para solucionar tem que identa-lo e remover os scripts para gerar novamente com `npm run build` ou `npm run dev` e assim irá funcionar corretamente a aplicação.
 
-Caso de falha após as tentativas, recriar o app com [CRA](https://create-react-app.dev/) e migrar ambiente inicial.
+Exemplo:
+
+![Erro](assets/erro.png)
+![Solução](assets/solucao.png)
 
 ---
 
@@ -141,3 +139,13 @@ assessment-frontend
 - Testes com RTL e Cypress
 - Carrinho de compras após clique no botão de "Comprar"
 - Rotas em public
+- Resultados do Lighthouse
+
+#### Resultados Lighthouse
+
+> 18/09
+
+![Performance1](assets/Performance-1.png)
+![Performance2](assets/Performance-2.png)
+![Performance3](assets/Performance-3.png)
+![Performance4](assets/Performance-4.png)
