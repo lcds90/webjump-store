@@ -1,12 +1,12 @@
 import React from 'react';
-import { Aside, Header, Navbar } from '../../components';
+import { Categories, Header, Navbar } from '../../components';
 import styles from './Login.module.css';
 
 const { main, content, footer } = styles;
 
 const Login = () => (
   <section className={content}>
-    <Aside />
+    <Categories />
     <article>cinza</article>
     <article>
       <h1>Seja bem vindo</h1>
