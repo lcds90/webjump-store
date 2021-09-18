@@ -17,11 +17,7 @@ const Store = () => {
     calcados: 'Calçados',
   };
   const dispatch = useDispatch();
-  const {
-    error, filters, items, loading, selected,
-  } = useSelector(
-    (state) => state.products,
-  );
+  const { error, items, loading } = useSelector((state) => state.products);
   useEffect(() => {
     if (id) dispatch(getProducts(id));
     else dispatch(getAllProducts());
@@ -31,9 +27,14 @@ const Store = () => {
     <section className={content}>
       <Filter />
       <article className={listContainer}>
-        <h2 className={listTitle}>{verifyId[id]}</h2>
+        <section>
+          <h2 className={listTitle}>{verifyId[id]}</h2>
+          Ordernar por
+        </section>
         <section className={list}>
-          {items.map((product) => (<ProductCard product={product} />))}
+          {items.map((product) => (
+            <ProductCard product={product} />
+          ))}
         </section>
       </article>
       <footer className={footer}>footer</footer>
