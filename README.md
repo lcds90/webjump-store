@@ -21,13 +21,13 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 ## 📜 Regras de Negócio
 
-- ⚪ Criar consulta com a lista de categorias a serem exibidas no menu
-- ⚪ Exibir os produtos das categorias.
+- ☑️ Criar consulta com a lista de categorias a serem exibidas no menu
+- ☑️ Exibir os produtos das categorias.
 - ⚪ Funcionalidade de filtro através da sidebar
 - ☑️ Fonte padrão: "Open Sans"
 - ☑️ Fonte do menu e botão de busca: "Open Sans - Extrabold"
 - ☑️ Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-- ⚪ Design responsivo nos breakpoints
+- ☑️ Design responsivo nos breakpoints
   - ⭕ 320px
   - ⭕ 768px
   - ⭕ 1024px
@@ -73,7 +73,10 @@ Para a parte de _gerenciamento de estado da aplicação_, optei pela implementa�
 A aplicações consiste da tela inicial, onde é opcional o usuário cadastrar seu nome e e-mail para listar ao final da compra pela loja.
 Então para o controle dessas rotas, utilizo o `react-router-dom`.
 
+Extensões utilizadas que auxiliam a visualização de props do React e de disparo de actions do Redux:
 
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR)
 #### :gear: Tecnologias utilizadas
 
 1. [React](https://pt-br.reactjs.org/): Utilizado React para criação da interface da aplicação web.

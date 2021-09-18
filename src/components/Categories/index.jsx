@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Aside.module.css';
+import styles from './Categories.module.css';
 import useCategories from '../../hooks/useCategories';
 
-const Categories = () => {
+const AsideCategories = () => {
   const { aside, li, ul } = styles;
   const {
     categories, loading, error,
@@ -33,8 +33,8 @@ const Categories = () => {
   );
 };
 
-Categories.propTypes = {
+AsideCategories.propTypes = {
 
 };
 
-export default Categories;
+export default AsideCategories;
