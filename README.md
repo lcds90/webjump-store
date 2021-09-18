@@ -16,6 +16,11 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
 
 :globe_with_meridians: [Deploy]()
 
+Possuo dois projetos semelhantes ao referente ao desafio qual foi me dado
+
+- [Carrinho de Compras](https://lcds90.github.io/project-shopping-cart-ml/): Este projeto foi utilizado somente as tecnologias HTML, CSS e Javascript com integração da API do Mercado Livre. [Repositório](https://github.com/lcds90/project-shopping-cart-ml) 
+
+- [FrontEnd Online Store](https://lcds90.github.io/project-shopping-cart-ml/): Este projeto foi realizado utilizando a API do Mercado Livre, porém utilizando React (). [Repositório](https://github.com/lcds90/frontend-online-store) 
 
 ---
 
@@ -39,10 +44,10 @@ O título que a aplicação tem é _Webjump Store_ e irá implementar o design s
   - ⭕ Safari
   - ⭕ Firefox
 - ☑️ HTML Semântico
+- ☑️ Acessibilidade
+- ☑️ SEO
+- ☑️ Performance
 - ⚪ Uso de pré-processadores CSS (Sass, Less)
-- ⚪ Acessibilidade
-- ⚪ SEO
-- ⚪ Performance
 - ⚪ Utilizar alguma automatização (Grunt, Gulp, ...)
 
 ## :books: Informações
@@ -137,9 +142,9 @@ assessment-frontend
 - Melhorar estilização do container do filtro
 - Refatorar código
 - Testes com RTL e Cypress
-- Carrinho de compras após clique no botão de "Comprar"
-- Rotas em public
+- Item ir para o carrinho de compras após clique no botão de "Comprar"
 - Resultados do Lighthouse
+- Mudança de tema
 
 #### Resultados Lighthouse
 
