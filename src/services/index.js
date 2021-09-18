@@ -1,4 +1,4 @@
-const BASE_API = `https://${process.env.URL}`;
+const BASE_API = 'https://app-webjump-store.herokuapp.com/api/V1';
 
 export const fetchCategories = async () => {
   try {
