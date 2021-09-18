@@ -1,4 +1,4 @@
-const BASE_API = 'http://localhost:8888/api/V1';
+const BASE_API = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
 export const fetchCategories = async () => {
   try {
