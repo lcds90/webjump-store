@@ -1,4 +1,4 @@
-const BASE_API = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+const BASE_API = `https://${process.env.URL}`;
 
 export const fetchCategories = async () => {
   try {
