@@ -2,6 +2,7 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAIL,
   GET_PRODUCTS_SUCCESS,
+  SELECT_FILTER,
 } from '../actions';
 
 const INITIAL_STATE = {
@@ -10,6 +11,7 @@ const INITIAL_STATE = {
   selected: [],
   loading: false,
   error: false,
+  selectedFilter: '',
 };
 
 const userReducer = (state = INITIAL_STATE, { payload, type }) => {
@@ -32,7 +34,11 @@ const userReducer = (state = INITIAL_STATE, { payload, type }) => {
         filters: payload.filters,
         items: payload.items,
       };
-
+    case SELECT_FILTER:
+      return {
+        ...state,
+        selectedFilter: payload,
+      };
     default:
       return state;
   }

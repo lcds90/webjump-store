@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import styles from './Navbar.module.css';
 import useCategories from '../../hooks/useCategories';
+import { sendSelectedFilter } from '../../redux/actions';
 
 const { article, nav, selected } = styles;
 
@@ -11,23 +13,27 @@ const Navbar = () => {
   const {
     categories, loading, error,
   } = useCategories();
-
+  const dispatch = useDispatch();
   useEffect(() => {
     verifyPath(pathname);
   }, [pathname]);
 
+  const resetFilter = () => {
+    dispatch(sendSelectedFilter({ key: '', value: '' }));
+  };
+
   const renderCategories = () => (
     <>
       <article className={statePath === '/' ? selected : article}>
-        <Link to="/">Página Inicial</Link>
+        <Link onClick={resetFilter} to="/">Página Inicial</Link>
       </article>
       {categories.map(({ name, path }) => (
         <article key={path} className={statePath.includes(path) ? selected : article}>
-          <Link to={`/store/${path}`}>{name}</Link>
+          <Link onClick={resetFilter} to={`/store/${path}`}>{name}</Link>
         </article>
       ))}
       <article className={statePath.includes('contact') ? selected : article}>
-        <Link to="/contact">Contato</Link>
+        <Link onClick={resetFilter} to="/contact">Contato</Link>
       </article>
     </>
   );

@@ -10,7 +10,7 @@
 .listContainer {
   background: var(--background-light);
   display: grid;
-  grid: 1fr 20fr / 1fr;
+  grid: 1fr max-content / 1fr;
   height: 100%;
 }
 

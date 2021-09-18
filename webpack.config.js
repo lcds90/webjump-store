@@ -14,7 +14,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      inject: 'body',
       meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
     }),
     new MiniCssExtractPlugin(),
@@ -63,6 +62,5 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-
   },
 };

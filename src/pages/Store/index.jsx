@@ -18,25 +18,29 @@ const Store = () => {
   };
   const dispatch = useDispatch();
   const {
-    error, filters, items, loading, selected,
-  } = useSelector(
-    (state) => state.products,
-  );
+    error, items, loading, selectedFilter,
+  } = useSelector((state) => state.products);
   useEffect(() => {
     if (id) dispatch(getProducts(id));
     else dispatch(getAllProducts());
   }, [id]);
-
+  const { key, value } = selectedFilter;
+  const filteredItems = items.filter(({ filter }) => filter.some((opt) => opt[key] === value));
   return (
     <section className={content}>
       <Filter />
       <article className={listContainer}>
-        <h2 className={listTitle}>{verifyId[id]}</h2>
+        <section>
+          <h2 className={listTitle}>{verifyId[id]}</h2>
+          Ordernar por
+        </section>
         <section className={list}>
-          {items.map((product) => (<ProductCard product={product} />))}
+          {selectedFilter && !(key === '' && value === '')
+            ? filteredItems.map((product) => <ProductCard product={product} />)
+            : items.map((product) => <ProductCard product={product} />)}
         </section>
       </article>
-      <footer className={footer}>footer</footer>
+      <footer className={footer} />
     </section>
   );
 };
