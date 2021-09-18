@@ -20,7 +20,7 @@ Possuo dois projetos semelhantes ao referente ao desafio qual foi me dado
 
 - [Carrinho de Compras](https://lcds90.github.io/project-shopping-cart-ml/): Este projeto foi utilizado somente as tecnologias HTML, CSS e Javascript com integração da API do Mercado Livre. [Repositório](https://github.com/lcds90/project-shopping-cart-ml) 
 
-- [FrontEnd Online Store](https://frontend-onlinestore.vercel.app/): Este projeto foi realizado utilizando a API do Mercado Livre, porém utilizando React (). [Repositório](https://github.com/lcds90/frontend-online-store) 
+- [FrontEnd Online Store](https://frontend-onlinestore.vercel.app/): Este projeto foi realizado utilizando a API do Mercado Livre, porém utilizando React. [Repositório](https://github.com/lcds90/frontend-online-store) 
 
 ---
 
