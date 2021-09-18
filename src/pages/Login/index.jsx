@@ -7,7 +7,7 @@ const { main, content, footer } = styles;
 const Login = () => (
   <section className={content}>
     <Categories />
-    <article>cinza</article>
+    <article />
     <article>
       <h1>Seja bem vindo</h1>
       <p>
@@ -33,7 +33,7 @@ const Login = () => (
         tortor, laoreet iaculis ligula venenatis ullamcorper.
       </p>
     </article>
-    <footer className={footer}>footer</footer>
+    <footer className={footer} />
   </section>
 );
 

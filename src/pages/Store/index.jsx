@@ -40,7 +40,7 @@ const Store = () => {
             : items.map((product) => <ProductCard product={product} />)}
         </section>
       </article>
-      <footer className={footer}>footer</footer>
+      <footer className={footer} />
     </section>
   );
 };
