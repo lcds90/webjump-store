@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'app.js',
+    filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'public'),
     publicPath: '/', // https://medium.com/fredwong-it/react-router-v4-nested-routes-not-work-with-webpack-dev-server-50a2cf32e46e
   },
