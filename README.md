@@ -66,10 +66,9 @@ Possuo dois projetos semelhantes ao referente ao desafio qual foi me dado
 ##### Detalhe
 Como estava em um ambiente configurado previamente para servir a API, optei pela opção de instalar o webpack e configurar-lo manualmente, porém estou com um problema nas configurações do webpack, as rotas estão funcionando corretamente no ambiente de desenvolvimento, porém em produção (`npm start`) está gerando o erro CANNOT GET {url}
 
-O que acontece é que o arquivo index.html quando é gerado no build ele acaba deixando os bundles passados presentes em seu corpo e está dando um erro referente a  isso, porém para solucionar tem que identa-lo e remover os scripts para gerar novamente com `npm run build` ou `npm run dev` e assim irá funcionar corretamente a aplicação.
+O que acontece é que o arquivo index.html quando é gerado no build ele acaba deixando os bundles passados presentes em seu corpo e está dando um erro referente a  isso, porém para solucionar tem que identa-lo e remover os scripts (remover da pasta public também) para gerar novamente com `npm run build` ou `npm run dev` e assim irá funcionar corretamente a aplicação.
 
-Exemplo:
-
+**Erro / Solução**
 ![Erro](assets/erro.png)
 ![Solução](assets/solucao.png)
 

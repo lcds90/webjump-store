@@ -5,6 +5,7 @@
   display: grid;
   grid: 25vh 1fr / 1fr;
   max-width: 100%;
+  position:relative;
 }
 
 .content {

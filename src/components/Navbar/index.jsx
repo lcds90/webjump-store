@@ -1,29 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { AiOutlineClose } from 'react-icons/ai';
 import styles from './Navbar.module.css';
 import useCategories from '../../hooks/useCategories';
-import { sendSelectedFilter } from '../../redux/actions';
+import { sendSelectedFilter, toggleNavbar } from '../../redux/actions';
 
-const { article, nav, selected } = styles;
+const {
+  article, hidden, nav, selected, closeNavbar,
+} = styles;
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const { showNavbar } = useSelector((state) => state.user);
   const [statePath, verifyPath] = useState('');
+  const [statusNavbar, toggleStatusNavbar] = useState(showNavbar);
+
   const {
     categories, loading, error,
   } = useCategories();
   const dispatch = useDispatch();
+
   useEffect(() => {
     verifyPath(pathname);
   }, [pathname]);
+
+  useEffect(() => {
+    dispatch(toggleNavbar());
+  }, [dispatch, statusNavbar]);
 
   const resetFilter = () => {
     dispatch(sendSelectedFilter({ key: '', value: '' }));
   };
 
-  const renderCategories = () => (
+  const renderNavbar = () => (
     <>
+      <AiOutlineClose className={closeNavbar} onClick={() => toggleStatusNavbar(!statusNavbar)} size="2em" />
       <article className={statePath === '/' ? selected : article}>
         <Link onClick={resetFilter} to="/">Página Inicial</Link>
       </article>
@@ -39,10 +51,9 @@ const Navbar = () => {
   );
 
   if (error) return <div>Houve algum erro</div>;
-
   return (
-    <nav className={nav}>
-      {loading ? 'Carregando' : renderCategories()}
+    <nav className={showNavbar ? nav : hidden}>
+      {loading ? 'Carregando' : renderNavbar()}
     </nav>
   );
 };

@@ -63,8 +63,29 @@
   bottom: 0;
   transform: translate(-60%, 40%);
 }
+.labelPhone {
+  display: grid;
+}
 
-.label {
+.navbarMobile {
+  position:absolute;
+  top: 15%;
+  left: 10%;
+}
+
+.inputMobile {
+  display: none;
+
+}
+
+.searchIcon {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  color:var(--primary);
+}
+
+.labelDesktop {
   display: none;
 }
 
@@ -89,20 +110,24 @@
     padding: 25px;
   }
 
-  .label {
+  .labelPhone, .inputMobile, .navbarMobile {
+    display: none;
+  }
+
+  .labelDesktop {
     width: 50%;
     height: 70%;
     display: grid;
     grid: 1fr / 5fr 1fr;
   }
 
-  .label > input {
+  .labelDesktop > input {
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 5px 0 0 5px;
   }
 
-  .label > button {
+  .labelDesktop > button {
     background: var(--primary);
     color: white;
     font-weight: 700;
