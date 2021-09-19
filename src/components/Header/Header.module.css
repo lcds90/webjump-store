@@ -32,6 +32,7 @@
 }
 
 /* !SECTION */
+
 /* SECTION Search */
 
 .searchAndLogo {
@@ -63,26 +64,26 @@
   bottom: 0;
   transform: translate(-60%, 40%);
 }
+
 .labelPhone {
   display: grid;
 }
 
 .navbarMobile {
-  position:absolute;
+  position: absolute;
   top: 15%;
   left: 10%;
 }
 
 .inputMobile {
   display: none;
-
 }
 
 .searchIcon {
   position: absolute;
   top: 15%;
   right: 15%;
-  color:var(--primary);
+  color: var(--primary);
 }
 
 .labelDesktop {
@@ -110,7 +111,9 @@
     padding: 25px;
   }
 
-  .labelPhone, .inputMobile, .navbarMobile {
+  .labelPhone,
+  .inputMobile,
+  .navbarMobile {
     display: none;
   }
 

@@ -33,7 +33,7 @@
   grid-column: span 2;
   width: 80%;
   height: 80%;
-  margin:auto;
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
