@@ -1,8 +1,13 @@
 import { USER_INFO, TOGGLE_NAVBAR } from '../actions';
 
 const INITIAL_STATE = {
+  firstName: '',
+  lastName: '',
   email: '',
-  name: '',
+  password: '',
+  phone: '',
+  address: '',
+  zipcode: '',
   showNavbar: false,
 };
 
@@ -11,8 +16,7 @@ const userReducer = (state = INITIAL_STATE, { payload, type }) => {
     case USER_INFO:
       return {
         ...state,
-        email: payload.email,
-        name: payload.password,
+        ...payload,
       };
 
     case TOGGLE_NAVBAR:

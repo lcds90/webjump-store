@@ -23,7 +23,7 @@ const {
 } = styles;
 
 const Header = () => {
-  const { showNavbar } = useSelector((state) => state.user);
+  const { showNavbar, firstName } = useSelector((state) => state.user);
   const [statusNavbar, toggleStatusNavbar] = useState(showNavbar);
   const dispatch = useDispatch();
 
@@ -31,16 +31,26 @@ const Header = () => {
     dispatch(toggleNavbar());
   }, [dispatch, statusNavbar]);
 
+  const renderUser = () => (
+    <article style={{ padding: '5px' }}>{`Bem vindo, ${firstName} :)`}</article>
+  );
+
+  const renderAccessToLogin = () => (
+    <>
+      <Link className={links} to="/login">
+        Acesse sua conta
+      </Link>
+      ou
+      <Link className={links} to="/join">
+        Cadastre-se
+      </Link>
+    </>
+  );
+
   return (
     <header className={container}>
       <section className={`${top} ${isLightTop}`}>
-        <Link className={links} to="/login">
-          Acesse sua conta
-        </Link>
-        ou
-        <Link className={links} to="/join">
-          Cadastre-se
-        </Link>
+        {firstName === '' ? renderAccessToLogin() : renderUser()}
       </section>
       <section className={`${searchAndLogo} ${isLightSearch}`}>
         <div>
