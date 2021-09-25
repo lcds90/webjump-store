@@ -2,14 +2,20 @@ import React from 'react';
 import { Categories, Header, Navbar } from '../../components';
 import styles from './Login.module.css';
 
-const { main, content, footer } = styles;
+const { content, footer, login } = styles;
 
 const Login = () => (
   <section className={content}>
     <Categories />
-    <article />
-    <article>
+    <article className={login}>
       <h1>Seja bem vindo</h1>
+      <p>
+        <button type="button">Acesse sua conta</button>
+        ou
+        <button type="button">Cadastre-se</button>
+      </p>
+    </article>
+    <article>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         malesuada est turpis, mattis ultricies libero fermentum vel. Donec

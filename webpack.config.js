@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 const path = require('path');
 
@@ -17,6 +18,14 @@ module.exports = {
       meta: { viewport: 'width=device-width, initial-scale=1.0, user-scalable=no' },
     }),
     new MiniCssExtractPlugin(),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.css',
+      failOnError: false,
+      quiet: false,
+      emitErrors: true, // by default this is to true to check the CSS lint errors
+    }),
   ],
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],
