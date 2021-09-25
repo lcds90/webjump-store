@@ -19,7 +19,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new StyleLintPlugin({
-      configFile: '.stylelintrc',
+      configFile: '.stylelintrc.json',
       context: 'src',
       files: '**/*.css',
       failOnError: false,

@@ -1,34 +1,34 @@
 .container {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid: 2fr 7fr / 1fr;
+	display: grid;
+	grid: 2fr 7fr / 1fr;
+	height: 100%;
+	width: 100%;
 }
 
 /* SECTION Top Nav */
 
 .top {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 0.9rem;
+	align-items: center;
+	color: white;
+	display: flex;
+	font-size: 0.9rem;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
 }
 
 .links {
-  color: white;
-  font-weight: bolder;
-  margin-inline: 10px;
+	color: white;
+	font-weight: bolder;
+	margin-inline: 10px;
 }
 
 .isDarkTop {
-  background: var(--header-dark);
+	background: var(--header-dark);
 }
 
 .isLightTop {
-  background: var(--header-light);
+	background: var(--header-light);
 }
 
 /* !SECTION */
@@ -36,106 +36,106 @@
 /* SECTION Search */
 
 .searchAndLogo {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid: 1fr / 1fr;
-  place-items: center;
+	display: grid;
+	grid: 1fr / 1fr;
+	height: 100%;
+	place-items: center;
+	width: 100%;
 }
 
 .searchAndLogo > div {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	position: relative;
 }
 
 .searchAndLogo > div > img {
-  width: 50%;
+	width: 50%;
 }
 
 .searchAndLogo > div > span {
-  color: grey;
-  font-weight: 700;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-60%, 40%);
+	bottom: 0;
+	color: grey;
+	font-size: 0.65rem;
+	font-weight: 700;
+	left: 50%;
+	letter-spacing: 0.05rem;
+	position: absolute;
+	transform: translate(-60%, 40%);
 }
 
 .labelPhone {
-  display: grid;
+	display: grid;
 }
 
 .navbarMobile {
-  position: absolute;
-  top: 15%;
-  left: 10%;
+	left: 10%;
+	position: absolute;
+	top: 15%;
 }
 
 .inputMobile {
-  display: none;
+	display: none;
 }
 
 .searchIcon {
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  color: var(--primary);
+	color: var(--primary);
+	position: absolute;
+	right: 15%;
+	top: 15%;
 }
 
 .labelDesktop {
-  display: none;
+	display: none;
 }
 
 .isDarkSearch {
-  background: var(--background-dark);
+	background: var(--background-dark);
 }
 
 .isLightSearch {
-  background: var(--background-light);
+	background: var(--background-light);
 }
 
 /* !SECTION */
 
 @media screen and (min-width: 768px) {
-  .top {
-    align-items: center;
-    justify-content: flex-end;
-  }
+	.top {
+		align-items: center;
+		justify-content: flex-end;
+	}
 
-  .searchAndLogo {
-    grid: 1fr / 1fr 2fr;
-    padding: 25px;
-  }
+	.searchAndLogo {
+		grid: 1fr / 1fr 2fr;
+		padding: 25px;
+	}
 
-  .labelPhone,
-  .inputMobile,
-  .navbarMobile {
-    display: none;
-  }
+	.labelPhone,
+	.inputMobile,
+	.navbarMobile {
+		display: none;
+	}
 
-  .labelDesktop {
-    width: 50%;
-    height: 70%;
-    display: grid;
-    grid: 1fr / 5fr 1fr;
-  }
+	.labelDesktop {
+		display: grid;
+		grid: 1fr / 5fr 1fr;
+		height: 70%;
+		width: 50%;
+	}
 
-  .labelDesktop > input {
-    height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 5px 0 0 5px;
-  }
+	.labelDesktop > input {
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 5px 0 0 5px;
+		height: 100%;
+	}
 
-  .labelDesktop > button {
-    background: var(--primary);
-    color: white;
-    font-weight: 700;
-    border: 0;
-    cursor: pointer;
-    padding: 5px;
-  }
+	.labelDesktop > button {
+		background: var(--primary);
+		border: 0;
+		color: white;
+		cursor: pointer;
+		font-weight: 700;
+		padding: 5px;
+	}
 }

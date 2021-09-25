@@ -2,8 +2,7 @@
   "extends": "stylelint-config-standard",
   "plugins": ["stylelint-order"],
   "rules": {
-    "order/order": ["custom-properties", "declarations"],
-    "order/properties-order": ["width", "height"],
+    "order/properties-alphabetical-order": true,
     "block-no-empty": null,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [ "always", {
@@ -18,6 +17,8 @@
       "except": ["first-nested"],
       "ignore": ["after-comment"]
     } ],
-    "unit-whitelist": ["em", "rem", "%", "s"]
+    "media-feature-name-value-allowed-list": {
+      "min-width": ["768px", "1024px"]
+    }
   }
 }
