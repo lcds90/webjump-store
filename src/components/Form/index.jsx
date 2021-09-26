@@ -7,10 +7,10 @@ import Input from '../Input';
 
 const Form = ({
   setShowForm,
-  showTitles,
+  showOnlyInfo,
 }) => {
   const {
-    article, form, infos, infosLi, wrapper,
+    article, confirmBtn, form, infos, infosLi, wrapper,
   } = styles;
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
@@ -30,6 +30,54 @@ const Form = ({
       [name]: value,
     }));
   };
+
+  if (showOnlyInfo) {
+    return (
+      <section className={infos}>
+        <h2>Confirme suas informações</h2>
+        <ul>
+          {Object.entries(userInfo).map((info) => {
+            const state = info[0];
+            const value = info[1];
+            const verifyTitle = {
+              firstName: 'Nome',
+              lastName: 'Sobrenome',
+              email: 'E-mail',
+              password: 'Senha',
+              phone: 'Telefone',
+              address: 'Endereço',
+              zipcode: 'CEP',
+            };
+            /* TODO Implementações
+            Implementar CEP com api, tera um input disabled mostrando o cep validado
+            deixando o input de endereco somente com informacao que vim da api
+            Campo de senha sera somente **** e tera um state para mostrar e ocultar
+            */
+            return (
+              <li className={infosLi}>
+                <span>
+                  {verifyTitle[state]}
+                </span>
+                <span>
+                  <input type="text" name={state} value={value} onChange={handleChange} />
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+        <button
+          className={confirmBtn}
+          onClick={() => {
+            setShowForm(false);
+            dispatch(sendUserInfo(userInfo));
+          }}
+          type="button"
+        >
+          Confirmar
+        </button>
+      </section>
+    );
+  }
 
   // NOTE Dispatch de userActions.js no onClick
   return (
@@ -109,18 +157,12 @@ const Form = ({
             */
             return (
               <li className={infosLi}>
-                {showTitles
-                  ? (
-                    <>
-                      <span>
-                        {verifyTitle[state]}
-                      </span>
-                      <span>
-                        {value}
-                      </span>
-                    </>
-                  )
-                  : value}
+                <span>
+                  {verifyTitle[state]}
+                </span>
+                <span>
+                  {value}
+                </span>
               </li>
             );
           })}
@@ -131,6 +173,7 @@ const Form = ({
             dispatch(sendUserInfo(userInfo));
           }}
           type="button"
+          className={confirmBtn}
         >
           Confirmar
         </button>
@@ -140,13 +183,13 @@ const Form = ({
 };
 
 Form.defaultProps = {
-  showTitles: true,
+  showOnlyInfo: true,
   setShowForm: null,
 };
 
 Form.propTypes = {
   setShowForm: PropTypes.func,
-  showTitles: PropTypes.bool,
+  showOnlyInfo: PropTypes.bool,
 };
 
 export default Form;

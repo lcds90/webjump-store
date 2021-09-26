@@ -50,7 +50,6 @@ const Header = () => {
   return (
     <header className={container}>
       <section className={`${top} ${isLightTop}`}>
-        <Link className={links} to="/cart"> Carrinho </Link>
         {!firstName ? renderAccessToLogin() : renderUser()}
       </section>
       <section className={`${searchAndLogo} ${isLightSearch}`}>

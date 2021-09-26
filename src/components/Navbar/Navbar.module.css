@@ -56,9 +56,9 @@ nav > article {
 		border: 0;
 		display: grid;
 		flex-direction: unset;
-		gap: 80px;
-		grid-auto-columns: max-content;
+		gap: 40px;
 		grid-auto-flow: column;
+		grid-template-columns: repeat(5, 1fr) 4fr;
 		grid-template-rows: 1fr;
 		height: unset;
 		justify-items: start;

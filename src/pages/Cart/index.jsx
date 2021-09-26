@@ -1,32 +1,21 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
-  Categories, Form, Input,
+  Categories, Form, Input, ProductCard,
 } from '../../components';
 import styles from './Cart.module.css';
 
 const {
-  content, footer, login,
+  content, editInfos, footer, itemsList, showInfoStyle, wrapperForm,
 } = styles;
 
 const Login = () => {
   const [showForm, setShowForm] = useState(false);
   const user = useSelector((state) => state.user);
+  const { selected } = useSelector((state) => state.products);
   return (
     <section className={content}>
-      <article>
-        <h2>
-          <button
-            style={showForm ? { display: 'none' } : { display: 'block' }}
-            type="button"
-            onClick={() => setShowForm(true)}
-          >
-            Editar informações cadastradas
-          </button>
-        </h2>
-        <div style={showForm ? { display: 'block' } : { display: 'none' }}>
-          <Form showTitles={false} setShowForm={setShowForm} />
-        </div>
+      <article className={showInfoStyle}>
         <ul>
           {Object
             .entries(user)
@@ -46,30 +35,25 @@ const Login = () => {
               return <li>{`${verifyTitle[state]}: ${value || 'Não cadastrado'}`}</li>;
             })}
         </ul>
+        <h2 style={showForm ? { display: 'none' } : { display: 'block' }}>
+          <button
+            className={editInfos}
+            type="button"
+            onClick={() => setShowForm(true)}
+          >
+            Editar informações cadastradas
+          </button>
+        </h2>
+        <div
+          onClickCapture={() => setShowForm(false)}
+          className={showForm ? wrapperForm : null}
+          style={showForm ? { display: 'block' } : { display: 'none' }}
+        >
+          <Form showTitles={false} setShowForm={setShowForm} />
+        </div>
       </article>
-      <article>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada est turpis, mattis ultricies libero fermentum vel. Donec
-          dapibus metus non dictum fringilla. Donec nec maximus tellus, eget
-          vulputate enim. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Cras tincidunt ullamcorper lacinia.
-          Proin tellus turpis, ornare a viverra sed, pulvinar sit amet nisi.
-          Aliquam accumsan purus at lectus imperdiet auctor. Duis ut ultrices
-          lacus. Cras iaculis imperdiet arcu vel ultricies. Sed rutrum velit
-          tortor, laoreet iaculis ligula venenatis ullamcorper.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          malesuada est turpis, mattis ultricies libero fermentum vel. Donec
-          dapibus metus non dictum fringilla. Donec nec maximus tellus, eget
-          vulputate enim. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Cras tincidunt ullamcorper lacinia.
-          Proin tellus turpis, ornare a viverra sed, pulvinar sit amet nisi.
-          Aliquam accumsan purus at lectus imperdiet auctor. Duis ut ultrices
-          lacus. Cras iaculis imperdiet arcu vel ultricies. Sed rutrum velit
-          tortor, laoreet iaculis ligula venenatis ullamcorper.
-        </p>
+      <article className={itemsList}>
+        {selected.map((product) => <ProductCard product={product} />)}
       </article>
       <footer className={footer} />
     </section>

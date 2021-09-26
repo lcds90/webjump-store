@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import {
-  Categories, Form, Input,
+  Categories, Form,
 } from '../../components';
 import styles from './Login.module.css';
 import welcomeMessage from './helpers';
@@ -27,7 +26,7 @@ const Login = () => {
   return (
     <section className={content}>
       <Categories />
-      {showForm ? <Form setShowForm={setShowForm} /> : renderLogin()}
+      {showForm ? <Form showOnlyInfo={false} setShowForm={setShowForm} /> : renderLogin()}
       <article>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
