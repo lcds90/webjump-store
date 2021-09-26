@@ -47,6 +47,9 @@ const Navbar = () => {
       <article className={statePath.includes('contact') ? selected : article}>
         <Link onClick={resetFilter} to="/contact">Contato</Link>
       </article>
+      <article className={statePath.includes('cart') ? selected : article}>
+        <Link onClick={resetFilter} to="/cart"> Carrinho </Link>
+      </article>
     </>
   );
 

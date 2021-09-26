@@ -1,4 +1,6 @@
 import {
+  CART_ADD_PRODUCT,
+  CART_DELETE_PRODUCT,
   GET_ALL_PRODUCTS,
   GET_ALL_PRODUCTS_FAIL,
   GET_ALL_PRODUCTS_SUCCESS,
@@ -8,6 +10,16 @@ import {
   SELECT_FILTER,
 } from './types';
 import { fetchProductList } from '../../services';
+
+export const addProduct = (payload) => ({
+  type: CART_ADD_PRODUCT,
+  payload,
+});
+
+export const deleteProduct = (payload) => ({
+  type: CART_DELETE_PRODUCT,
+  payload,
+});
 
 const productsFetch = () => ({
   type: GET_PRODUCTS,

@@ -36,8 +36,8 @@ const Store = () => {
         </section>
         <section className={list}>
           {selectedFilter && !(key === '' && value === '')
-            ? filteredItems.map((product) => <ProductCard product={product} />)
-            : items.map((product) => <ProductCard product={product} />)}
+            ? filteredItems.map((product) => <ProductCard key={product.name} product={product} />)
+            : items.map((product) => <ProductCard key={product.name} product={product} />)}
         </section>
       </article>
       <footer className={footer} />
