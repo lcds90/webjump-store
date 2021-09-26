@@ -62,9 +62,10 @@ const AsideFilters = () => {
                       event,
                     ) => setSelectedFilter({ key: filterValue[0], value: event.target.value })}
                   >
-                    {uniqueValues.map((value) => (
-                      <option>{value}</option>
-                    ))}
+                    {uniqueValues
+                      .map((value) => (
+                        <option>{value}</option>
+                      ))}
                   </select>
                 </article>
               ))}

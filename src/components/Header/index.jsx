@@ -32,7 +32,7 @@ const Header = () => {
   }, [dispatch, statusNavbar]);
 
   const renderUser = () => (
-    <article style={{ padding: '5px' }}>{`Bem vindo, ${firstName} :)`}</article>
+    <article>{`Bem vindo, ${firstName} :)`}</article>
   );
 
   const renderAccessToLogin = () => (
@@ -50,7 +50,8 @@ const Header = () => {
   return (
     <header className={container}>
       <section className={`${top} ${isLightTop}`}>
-        {firstName === '' ? renderAccessToLogin() : renderUser()}
+        <Link className={links} to="/cart"> Carrinho </Link>
+        {!firstName ? renderAccessToLogin() : renderUser()}
       </section>
       <section className={`${searchAndLogo} ${isLightSearch}`}>
         <div>

@@ -1,13 +1,13 @@
 import { USER_INFO, TOGGLE_NAVBAR } from '../actions';
 
 const INITIAL_STATE = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  password: '',
-  phone: '',
-  address: '',
-  zipcode: '',
+  firstName: undefined,
+  lastName: undefined,
+  email: undefined,
+  password: undefined,
+  phone: undefined,
+  address: undefined,
+  zipcode: undefined,
   showNavbar: false,
 };
 

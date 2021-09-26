@@ -1,24 +1,18 @@
 .content {
 	background: var(--background-light);
 	display: grid;
-	gap: 25px;
-	grid: 1fr 5fr 1fr / 1fr;
+	gap: 0 25px;
+	grid: 1fr 1fr / 1fr;
 	height: 100%;
 	overflow: auto;
 	padding: 15px;
 	width: 100%;
 }
 
-.content > aside {
-	background: var(--aside-light);
-	grid-row: span 2;
-}
-
 .login {
 	background: var(--container-light);
 	display: grid;
 	grid: 1fr / 1fr 2fr;
-	grid-column: span 2;
 	height: 60vh;
 	place-items: center;
 }
@@ -55,17 +49,15 @@
 
 .content > footer {
 	background: var(--primary);
-	grid-column: span 2;
 }
 
 @media screen and (min-width: 768px) {
 	.content {
-		grid: 3fr repeat(2, 1fr) / 1fr 5fr;
+		grid: 1fr 1fr / 1fr;
 	}
 
 	.login {
 		grid: 1fr / 1fr 1fr;
-		grid-column: unset;
 	}
 
 	.login > h1 {
