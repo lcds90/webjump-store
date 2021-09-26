@@ -8,6 +8,7 @@ const AsideCategories = () => {
   const {
     categories, loading, error,
   } = useCategories();
+
   const renderCategories = () => (
     <ul className={ul}>
       <li className={li}>

@@ -1,0 +1,56 @@
+.input {
+	animation: Fade 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+	background: white;
+	border: 0;
+	border-bottom: 0.5px black double;
+	border-radius: 5px;
+	border-right: 0.5px black double;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+	height: 100%;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+.labelStyle {
+	background: #353535;
+	border-left: 3px solid var(--primary);
+	border-radius: 15px 0 15px 0;
+	border-top: 3px solid var(--primary);
+	color: white;
+	display: grid;
+	height: 30%;
+	left: 25px;
+	padding: 10px;
+	place-items: center;
+	position: absolute;
+	top: 15px;
+	width: 50%;
+	z-index: 0;
+}
+
+.fieldset {
+	display: grid;
+	height: 100%;
+	padding: 0 25px;
+	place-items: center;
+	position: relative;
+	width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.input {
+		height: 30%;
+		width: 100%;
+	}
+}
+
+@keyframes Fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

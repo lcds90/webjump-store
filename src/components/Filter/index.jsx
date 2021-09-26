@@ -28,14 +28,15 @@ const AsideFilters = () => {
   const getFilteredValueFromProducts = getFilterKeys.reduce(
     (arr, condition) => {
       // filtro de itens
-      const valueFilters = items.map(({ filter }) => filter.map((filterValue) => {
-        const verifyKey = Object.prototype.hasOwnProperty.call(
-          filterValue,
-          condition,
-        );
-        if (verifyKey) return filterValue[condition];
-        return null;
-      }));
+      const valueFilters = items
+        .map(({ filter }) => filter.map((filterValue) => {
+          const verifyKey = Object.prototype.hasOwnProperty.call(
+            filterValue,
+            condition,
+          );
+          if (verifyKey) return filterValue[condition];
+          return null;
+        }));
       const filter = [...valueFilters, ...arr];
       return filter;
     },
@@ -53,18 +54,19 @@ const AsideFilters = () => {
           );
           const uniqueValues = [...new Set(filteredValues)];
           return (
-            <section>
+            <section key={filter}>
               {values.map((filterValue) => (
-                <article>
+                <article key={filterValue}>
                   {`Filtar por ${filterValue[1]}`}
                   <select
                     onChange={(
                       event,
                     ) => setSelectedFilter({ key: filterValue[0], value: event.target.value })}
                   >
-                    {uniqueValues.map((value) => (
-                      <option>{value}</option>
-                    ))}
+                    {uniqueValues
+                      .map((value) => (
+                        <option key={value}>{value}</option>
+                      ))}
                   </select>
                 </article>
               ))}

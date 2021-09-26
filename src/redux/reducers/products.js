@@ -1,4 +1,6 @@
 import {
+  CART_ADD_PRODUCT,
+  CART_DELETE_PRODUCT,
   GET_PRODUCTS,
   GET_PRODUCTS_FAIL,
   GET_PRODUCTS_SUCCESS,
@@ -16,6 +18,17 @@ const INITIAL_STATE = {
 
 const userReducer = (state = INITIAL_STATE, { payload, type }) => {
   switch (type) {
+    case CART_ADD_PRODUCT:
+      return {
+        ...state,
+        selected: [...state.selected, payload],
+      };
+    case CART_DELETE_PRODUCT:
+      return {
+        ...state,
+        selected: [...state.selected].filter((p) => p.id !== payload.id),
+      };
+
     case GET_PRODUCTS:
       return {
         ...state,

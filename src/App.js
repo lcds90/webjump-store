@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Login, Store } from './pages';
+import { Cart, Login, Store } from './pages';
 import { Header, Navbar } from './components';
 import styles from './App.module.css';
 const {
@@ -14,6 +14,7 @@ const App = () => (
     <Switch>
       <Route path='/store/:id' component={Store} />
       <Route path='/store' component={Store} />
+      <Route path='/cart' component={Cart} />
       <Route path='/' component={Login} />
     </Switch>
   </main>
