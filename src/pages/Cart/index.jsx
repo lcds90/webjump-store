@@ -6,7 +6,7 @@ import {
 import styles from './Cart.module.css';
 
 const {
-  content, editInfos, footer, itemsList, showInfoStyle, wrapperForm,
+  content, editInfos, footer, itemsList, showInfoStyle, wrapperForm, wrapperFormBackground,
 } = styles;
 
 const Login = () => {
@@ -35,7 +35,7 @@ const Login = () => {
               return <li>{`${verifyTitle[state]}: ${value || 'Não cadastrado'}`}</li>;
             })}
         </ul>
-        <h2 style={showForm ? { display: 'none' } : { display: 'block' }}>
+        <h2>
           <button
             className={editInfos}
             type="button"
@@ -46,6 +46,10 @@ const Login = () => {
         </h2>
         <div
           onClickCapture={() => setShowForm(false)}
+          className={showForm ? wrapperFormBackground : null}
+          style={showForm ? { display: 'block' } : { display: 'none' }}
+        />
+        <div
           className={showForm ? wrapperForm : null}
           style={showForm ? { display: 'block' } : { display: 'none' }}
         >

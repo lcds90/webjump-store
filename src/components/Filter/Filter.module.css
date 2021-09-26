@@ -3,21 +3,60 @@
 	grid-column: span 2;
 	grid-template-rows: 1fr;
 	height: 100%;
-	padding: 10px 30px;
+	padding: 10px;
 	place-items: center;
 	width: 100%;
 }
 
 .ul {
 	display: grid;
+	gap: 35px 0;
 	grid-auto-rows: 3rem;
 	grid-template-columns: 1fr;
 	list-style: none;
+	width: 100%;
 }
 
-.li > a {
+.li a {
 	color: black;
 	text-decoration: none;
+}
+
+.li section {
+	display: grid;
+	place-items: center;
+	width: 100%;
+}
+
+.li section article {
+	border-bottom: 2.5px double var(--secondary);
+	border-left: 2.5px double var(--secondary);
+	color: grey;
+	display: grid;
+	grid: max-content 1fr / 1fr;
+	height: 100%;
+	padding: 5px;
+	width: 100%;
+}
+
+.li section article select {
+	background: var(--secondary);
+	border: 5px double white;
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 5px;
+}
+
+.li button {
+	background: var(--secondary);
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	font-weight: 500;
+	height: 100%;
+	text-transform: uppercase;
+	width: 100%;
 }
 
 @media screen and (min-width: 768px) {

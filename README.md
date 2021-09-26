@@ -47,8 +47,6 @@ Possuo dois projetos semelhantes ao referente ao desafio qual foi me dado
 - ☑️ Acessibilidade
 - ☑️ SEO
 - ☑️ Performance
-- ⚪ Uso de pré-processadores CSS (Sass, Less)
-- ⚪ Utilizar alguma automatização (Grunt, Gulp, ...)
 
 ## :books: Informações
 
@@ -138,10 +136,8 @@ assessment-frontend
 #### A Implementar
 
 - Sistema de busca com todos os produtos
-- Melhorar estilização do container do filtro
 - Refatorar código
 - Testes com RTL e Cypress
-- Item ir para o carrinho de compras após clique no botão de "Comprar"
 - Resultados do Lighthouse
 - Mudança de tema
 

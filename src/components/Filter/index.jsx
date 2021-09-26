@@ -59,10 +59,11 @@ const AsideFilters = () => {
                 <article key={filterValue}>
                   {`Filtar por ${filterValue[1]}`}
                   <select
-                    onChange={(
+                    onClick={(
                       event,
                     ) => setSelectedFilter({ key: filterValue[0], value: event.target.value })}
                   >
+                    <option selected disabled value="">Selecionar</option>
                     {uniqueValues
                       .map((value) => (
                         <option key={value}>{value}</option>
@@ -74,7 +75,7 @@ const AsideFilters = () => {
           );
         })}
       </li>
-      <li>
+      <li className={li}>
         <button
           type="button"
           onClick={() => setSelectedFilter({ key: '', value: '' })}

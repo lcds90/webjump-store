@@ -87,6 +87,7 @@
 	overflow: auto;
 	padding: 5px;
 	width: 100%;
+	z-index: 10;
 }
 
 .infos > h2 {

@@ -11,7 +11,10 @@
 	padding: 0;
 }
 
-body { min-height: 100%; }
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
 
 /* NOTE Paleta de cores */
 
